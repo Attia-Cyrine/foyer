@@ -5,7 +5,7 @@ services:
     image: mysql:5.7
     restart: unless-stopped
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=
       - MYSQL_DATABASE=db
     ports:
       - 3306:3306
@@ -14,7 +14,7 @@ services:
   app-timesheet:
     depends_on:
       - mysqldb
-    image: samarboughanmi/tp-foyer:1.0.0
+    image: cyrineattia/tp-foyer:1.0.0
     #build : ./
     restart: on-failure
     ports:
