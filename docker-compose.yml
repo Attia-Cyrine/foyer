@@ -6,7 +6,7 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=db
     ports:
-      - 3307:3306
+      - 3306:3306
     volumes:
       - db:/var/lib/mysql
 
@@ -16,7 +16,7 @@ services:
     container_name: pipeline-tp-foyer
     image: cyrineattia/tp-foyer:5.0.0
     ports:
-      - 8091:8089
+      - 8089:8089
     restart: on-failure
     environment:
       SPRING_APPLICATION_JSON: >
