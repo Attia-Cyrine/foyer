@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Bloc.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tp-foyer</a> &gt; <a href="index.source.html" class="el_package">tn.esprit.tpfoyer.entity</a> &gt; <span class="el_source">Bloc.java</span></div><h1>Bloc.java</h1><pre class="source lang-java linenums">package tn.esprit.tpfoyer.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+
+import java.util.Set;
+
+@Entity
+<span class="fc" id="L9">public class Bloc {</span>
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idBloc;
+
+    private String nomBloc;
+    private long capaciteBloc;
+
+    @ManyToOne
+    @JoinColumn(name = &quot;foyer_id&quot;)
+    @JsonIgnore
+    private Foyer foyer;
+
+    @OneToMany(mappedBy = &quot;bloc&quot;)
+    @JsonIgnore
+    private Set&lt;Chambre&gt; chambres;
+
+    // Getters &amp; Setters
+<span class="fc" id="L28">    public Long getIdBloc() { return idBloc; }</span>
+<span class="nc" id="L29">    public void setIdBloc(Long idBloc) { this.idBloc = idBloc; }</span>
+
+<span class="fc" id="L31">    public String getNomBloc() { return nomBloc; }</span>
+<span class="fc" id="L32">    public void setNomBloc(String nomBloc) { this.nomBloc = nomBloc; }</span>
+
+<span class="nc" id="L34">    public long getCapaciteBloc() { return capaciteBloc; }</span>
+<span class="fc" id="L35">    public void setCapaciteBloc(long capaciteBloc) { this.capaciteBloc = capaciteBloc; }</span>
+
+<span class="fc" id="L37">    public Foyer getFoyer() { return foyer; }</span>
+<span class="fc" id="L38">    public void setFoyer(Foyer foyer) { this.foyer = foyer; }</span>
+
+<span class="nc" id="L40">    public Set&lt;Chambre&gt; getChambres() { return chambres; }</span>
+<span class="nc" id="L41">    public void setChambres(Set&lt;Chambre&gt; chambres) { this.chambres = chambres; }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

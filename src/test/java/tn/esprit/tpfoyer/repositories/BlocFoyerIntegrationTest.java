@@ -4,13 +4,14 @@ import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import tn.esprit.tpfoyer.entity.Bloc;
 import tn.esprit.tpfoyer.entity.Foyer;
 import tn.esprit.tpfoyer.repository.BlocRepository;
 import tn.esprit.tpfoyer.repository.FoyerRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
+@ActiveProfiles("test")
 @SpringBootTest
 @Transactional // pour rollback à la fin du test
 public class BlocFoyerIntegrationTest {

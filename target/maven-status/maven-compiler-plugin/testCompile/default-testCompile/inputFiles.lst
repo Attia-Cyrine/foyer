@@ -1,10 +1,11 @@
 C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\integration\BlocRepositoryTest.java
 C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\integration\FoyerBlocIntegrationTest.java
+C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\BlocFoyerIntegrationTest.java
 C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\controller\BlocControllerTest.java
 C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\controller\FoyerRestControllerTest.java
 C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\entity\UniversiteEntityTest.java
 C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\repository\BlocRepositoryTest.java
 C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\repository\FoyerRepositoryTest.java
-C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\service\BlocFoyerIntegrationTest.java
-C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\service\UniversiteFonctionnelTest.java
-C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\service\FoyerServiceImplTest.java
+C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\service\BlocServiceTest.java
+C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\service\FoyerServiceImplTest.java
+C:\Users\Cyrine ATTIA\Downloads\tp-foyer1\tp-foyer\src\test\java\tn\esprit\tpfoyer\repositories\UniversiteFonctionnelTest.java

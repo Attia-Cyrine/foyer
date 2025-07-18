@@ -1,1 +1,9 @@
+tn\esprit\tpfoyer\repositories\controller\FoyerRestControllerTest.class
+tn\esprit\tpfoyer\repositories\UniversiteFonctionnelTest.class
+tn\esprit\tpfoyer\repositories\BlocFoyerIntegrationTest.class
+tn\esprit\tpfoyer\repositories\repository\FoyerRepositoryTest.class
+tn\esprit\tpfoyer\repositories\service\FoyerServiceImplTest.class
+tn\esprit\tpfoyer\repositories\entity\UniversiteEntityTest.class
+tn\esprit\tpfoyer\repositories\repository\BlocRepositoryTest.class
+tn\esprit\tpfoyer\repositories\service\BlocServiceTest.class
 tn\esprit\tpfoyer\repositories\controller\BlocControllerTest.class

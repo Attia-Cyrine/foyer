@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Foyer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tp-foyer</a> &gt; <a href="index.source.html" class="el_package">tn.esprit.tpfoyer.entity</a> &gt; <span class="el_source">Foyer.java</span></div><h1>Foyer.java</h1><pre class="source lang-java linenums">package tn.esprit.tpfoyer.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import java.util.Set;
+
+@Entity
+public class Foyer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idFoyer;
+
+    private String nomFoyer;
+    private long capaciteFoyer;
+
+    @OneToOne(mappedBy = &quot;foyer&quot;)
+    @JsonIgnore
+    private Universite universite;
+
+    @OneToMany(mappedBy = &quot;foyer&quot;)
+    @JsonIgnore
+    private Set&lt;Bloc&gt; blocs;
+
+    // Constructeur complet avec initialisation des champs
+<span class="fc" id="L26">    public Foyer(Long idFoyer, String nomFoyer, long capaciteFoyer, Universite universite, Set&lt;Bloc&gt; blocs) {</span>
+<span class="fc" id="L27">        this.idFoyer = idFoyer;</span>
+<span class="fc" id="L28">        this.nomFoyer = nomFoyer;</span>
+<span class="fc" id="L29">        this.capaciteFoyer = capaciteFoyer;</span>
+<span class="fc" id="L30">        this.universite = universite;</span>
+<span class="fc" id="L31">        this.blocs = blocs;</span>
+<span class="fc" id="L32">    }</span>
+
+    // Constructeur plus simple si tu veux, sans universite ni blocs
+<span class="nc" id="L35">    public Foyer(Long idFoyer, String nomFoyer, long capaciteFoyer) {</span>
+<span class="nc" id="L36">        this.idFoyer = idFoyer;</span>
+<span class="nc" id="L37">        this.nomFoyer = nomFoyer;</span>
+<span class="nc" id="L38">        this.capaciteFoyer = capaciteFoyer;</span>
+<span class="nc" id="L39">    }</span>
+
+    // Constructeur vide par défaut
+<span class="fc" id="L42">    public Foyer() {</span>
+<span class="fc" id="L43">    }</span>
+
+    // Getters &amp; Setters
+<span class="fc" id="L46">    public Long getIdFoyer() { return idFoyer; }</span>
+<span class="fc" id="L47">    public void setIdFoyer(Long idFoyer) { this.idFoyer = idFoyer; }</span>
+
+<span class="fc" id="L49">    public String getNomFoyer() { return nomFoyer; }</span>
+<span class="fc" id="L50">    public void setNomFoyer(String nomFoyer) { this.nomFoyer = nomFoyer; }</span>
+
+<span class="fc" id="L52">    public long getCapaciteFoyer() { return capaciteFoyer; }</span>
+<span class="fc" id="L53">    public void setCapaciteFoyer(long capaciteFoyer) { this.capaciteFoyer = capaciteFoyer; }</span>
+
+<span class="nc" id="L55">    public Universite getUniversite() { return universite; }</span>
+<span class="nc" id="L56">    public void setUniversite(Universite universite) { this.universite = universite; }</span>
+
+<span class="nc" id="L58">    public Set&lt;Bloc&gt; getBlocs() { return blocs; }</span>
+<span class="nc" id="L59">    public void setBlocs(Set&lt;Bloc&gt; blocs) { this.blocs = blocs; }</span>
+}
+
+
+//package tn.esprit.tpfoyer.entity;
+//
+//import com.fasterxml.jackson.annotation.JsonIgnore;
+//import jakarta.persistence.*;
+//
+//import java.util.Set;
+//
+//@Entity
+//public class Foyer {
+//
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long idFoyer;
+//
+//    private String nomFoyer;
+//    private long capaciteFoyer;
+//
+//    @OneToOne(mappedBy = &quot;foyer&quot;)
+//    @JsonIgnore
+//    private Universite universite;
+//
+//    @OneToMany(mappedBy = &quot;foyer&quot;)
+//    @JsonIgnore
+//    private Set&lt;Bloc&gt; blocs;
+//
+//    public Foyer(Long l, String f1, int i, Object o, Object o1) {
+//    }
+//
+//    public Foyer() {
+//
+//    }
+//
+//    // Getters &amp; Setters
+//    public Long getIdFoyer() { return idFoyer; }
+//    public void setIdFoyer(Long idFoyer) { this.idFoyer = idFoyer; }
+//
+//    public String getNomFoyer() { return nomFoyer; }
+//    public void setNomFoyer(String nomFoyer) { this.nomFoyer = nomFoyer; }
+//
+//    public long getCapaciteFoyer() { return capaciteFoyer; }
+//    public void setCapaciteFoyer(long capaciteFoyer) { this.capaciteFoyer = capaciteFoyer; }
+//
+//    public Universite getUniversite() { return universite; }
+//    public void setUniversite(Universite universite) { this.universite = universite; }
+//
+//    public Set&lt;Bloc&gt; getBlocs() { return blocs; }
+//    public void setBlocs(Set&lt;Bloc&gt; blocs) { this.blocs = blocs; }
+//}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
