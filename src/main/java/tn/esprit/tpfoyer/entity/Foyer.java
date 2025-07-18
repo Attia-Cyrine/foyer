@@ -23,6 +23,13 @@ public class Foyer {
     @JsonIgnore
     private Set<Bloc> blocs;
 
+    public Foyer(Long l, String f1, int i, Object o, Object o1) {
+    }
+
+    public Foyer() {
+
+    }
+
     // Getters & Setters
     public Long getIdFoyer() { return idFoyer; }
     public void setIdFoyer(Long idFoyer) { this.idFoyer = idFoyer; }
